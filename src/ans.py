@@ -12,7 +12,7 @@ Create a file test_prime_checker.py for testing.
 
 
 def is_prime(candidate):
-    if not isinstance(candidate, int):
+    if not type(candidate) is int: # necessary since bool is a subclass of int, so checking explicitly for int
         raise ValueError(f"{candidate} - this is not a number!")
     elif candidate < 0:
         raise ValueError(f"{candidate} - this is a negative number!")
